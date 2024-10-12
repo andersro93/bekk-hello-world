@@ -140,7 +140,7 @@ jobs:
 
       - name: 📑 Create ${{ needs.metadata.outputs.tag }} manifest
         run: |
-          docker create manifest ghcr.io/${{ env.REPOSITORY }}:${{ needs.metadata.outputs.tag }} \
+          docker manifest create ghcr.io/${{ env.REPOSITORY }}:${{ needs.metadata.outputs.tag }} \
             ghcr.io/${{ env.REPOSITORY }}:${{ needs.metadata.outputs.tag }}-amd64 \
             ghcr.io/${{ env.REPOSITORY }}:${{ needs.metadata.outputs.tag }}-arm64
 
@@ -150,7 +150,7 @@ jobs:
 
       - name: 📑 Create latest manifest
         run: |
-          docker create manifest ghcr.io/${{ env.REPOSITORY }}:latest \
+          docker manifest create ghcr.io/${{ env.REPOSITORY }}:latest \
             ghcr.io/${{ env.REPOSITORY }}:latest-amd64 \
             ghcr.io/${{ env.REPOSITORY }}:latest-arm64
 
