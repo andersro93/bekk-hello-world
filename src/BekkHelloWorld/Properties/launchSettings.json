@@ -4,8 +4,8 @@
     "BekkHelloWorld": {
       "commandName": "Project",
       "environmentVariables": {
-        "SITE__TitleText": "DEV - DEV - DEV",
-        "SITE__SubText": "We're running in dev mode"
+        "SITE__GREETING": "World",
+        "SITE__FROM": "The Developer"
       }
     }
   }

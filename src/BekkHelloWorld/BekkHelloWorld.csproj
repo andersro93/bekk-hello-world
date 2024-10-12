@@ -5,6 +5,20 @@
         <TargetFramework>net8.0</TargetFramework>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <IsPublishable>true</IsPublishable>
+
+        <PublishProfile>DefaultContainer</PublishProfile>
+        <PublishAot>true</PublishAot>
+        <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
+
+        <ContainerRepository>andersro93/bekk-hello-world</ContainerRepository>
+        <ContainerFamily>alpine</ContainerFamily>
+        <ContainerImageTags>$(Version);latest</ContainerImageTags>
     </PropertyGroup>
+
+    <ItemGroup>
+        <ContainerPort Include="8080" Type="tcp" />
+        <ContainerEnvironmentVariable Include="ASPNETCORE_URLS" Value="http://*:8080" />
+    </ItemGroup>
 
 </Project>

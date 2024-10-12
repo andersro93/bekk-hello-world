@@ -1,13 +1,14 @@
-﻿var builder = WebApplication.CreateBuilder(args);
+﻿var builder = WebApplication.CreateSlimBuilder(args);
 
 builder.Services.AddOptions<SiteOptions>()
     .Bind(builder.Configuration.GetSection(SiteOptions.Key));
 
-builder.Services.AddRazorPages();
-
 var app = builder.Build();
 
-app.UseStaticFiles();
-app.MapRazorPages();
+app.MapGet("/", (IOptionsSnapshot<SiteOptions> options) =>
+{
+    var siteOptions = options.Value;
+    return $"Hello, {siteOptions.Greeting}, from {siteOptions.From}";
+});
 
 app.Run();
