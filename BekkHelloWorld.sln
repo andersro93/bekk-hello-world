@@ -7,6 +7,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{67DD6ADE-BA8
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C0CB18DF-1435-4CEA-8678-30F7E80C8255}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BekkHelloWorld", "src\BekkHelloWorld\BekkHelloWorld.csproj", "{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -14,5 +16,14 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309} = {67DD6ADE-BA87-434F-9B36-C055FEEA1E3E}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AB7CA6F-1F9C-410E-9AEB-C0A4CC6A1309}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
