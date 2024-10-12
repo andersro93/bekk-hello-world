@@ -8,7 +8,6 @@
         <IsPublishable>true</IsPublishable>
 
         <PublishProfile>DefaultContainer</PublishProfile>
-        <PublishAot>true</PublishAot>
         <EnableSdkContainerSupport>true</EnableSdkContainerSupport>
 
         <ContainerRepository>andersro93/bekk-hello-world</ContainerRepository>
