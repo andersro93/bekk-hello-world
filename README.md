@@ -11,6 +11,6 @@ The application is packaged as a docker container and can run anywhere where you
 ### Locally
 In order to test the image locally, simply run:
 ```bash
-docker run --rm -p 127.0.0.1:8080:8080 -e SITE_GREETING=$(whoami) -e SITE_FROM="Bekk" ghcr.io/andersro93/bekk-hello-world:latest
+docker run --rm -p 127.0.0.1:8080:8080 -e SITE__GREETING=$(whoami) -e SITE__FROM="Bekk" ghcr.io/andersro93/bekk-hello-world:latest
 ```
 You can then open a browser and navigate to [http://localhost:8080](http://localhost:8080).
