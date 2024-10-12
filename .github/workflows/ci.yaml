@@ -36,16 +36,8 @@ jobs:
         with:
           useConfigFile: true
 
-      - name: 📋 Generate changelog
-        id: changelog
-        uses: requarks/changelog-action@v1
-        with:
-          token: ${{ github.token }}
-          tag: ${{ steps.gitversion.outputs.fullSemVer }}
-
     outputs:
       tag: ${{ steps.gitversion.outputs.fullSemVer }}
-      changes: ${{ steps.changelog.outputs.changes }}
 
   tests:
     name: 🧪 Tests
@@ -127,12 +119,19 @@ jobs:
           git tag -f ${{ needs.metadata.outputs.tag }}
           git push origin ${{ needs.metadata.outputs.tag }}
 
+      - name: 📋 Generate changelog
+        id: changelog
+        uses: requarks/changelog-action@v1
+        with:
+          token: ${{ github.token }}
+          tag: ${{ steps.gitversion.outputs.fullSemVer }}
+
       - name: 🚀 Create Github Release
         uses: ncipollo/release-action@v1
         with:
           tag: ${{ needs.metadata.outputs.tag }}
           token: ${{ secrets.GITHUB_TOKEN }}
           name: Release ${{ needs.metadata.outputs.tag }}
-          body: ${{ needs.metadata.outputs.changes }}
+          body: ${{ steps.changelog.outputs.changes }}
           draft: false
           prerelease: false
