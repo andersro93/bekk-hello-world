@@ -1,0 +1,25 @@
+@page "/"
+@using Microsoft.Extensions.Options
+@inject IOptionsSnapshot<SiteOptions> SiteOptions;
+
+<!DOCTYPE html>
+
+<html lang="no">
+<head>
+    <title>Hello Bekk</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/css/main.css" />
+</head>
+<body>
+<main>
+    <img
+        class="logo"
+        src="logos/Bekk-Light.svg"
+        alt="Bekk-Light"
+        height="200"
+    />
+    <h1>@SiteOptions.Value.TitleText</h1>
+    <h2>@SiteOptions.Value.SubText</h2>
+</main>
+</body>
+</html>

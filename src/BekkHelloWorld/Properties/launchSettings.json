@@ -1,0 +1,12 @@
+{
+  "$schema": "http://json.schemastore.org/launchsettings.json",
+  "profiles": {
+    "BekkHelloWorld": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "SITE__TitleText": "DEV - DEV - DEV",
+        "SITE__SubText": "We're running in dev mode"
+      }
+    }
+  }
+}
