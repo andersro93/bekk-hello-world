@@ -9,15 +9,7 @@ updates:
       prefix: "ci"
 
   - package-ecosystem: "nuget"
-    directory: "/src"
-    schedule:
-      interval: "weekly"
-    commit-message:
-      include: scope
-      prefix: "chore"
-
-  - package-ecosystem: "nuget"
-    directory: "/tests"
+    directory: "/"
     schedule:
       interval: "weekly"
     commit-message:
