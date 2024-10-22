@@ -5,6 +5,8 @@ builder.Services.AddOptions<SiteOptions>()
 
 var app = builder.Build();
 
+app.MapGet("/ready", () => "👌");
+
 app.MapGet("/", (IOptionsSnapshot<SiteOptions> options) =>
 {
     var siteOptions = options.Value;
