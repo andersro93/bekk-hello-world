@@ -94,7 +94,7 @@ jobs:
       - name: 🏗️ Build container images
         run: |
           dotnet publish -p:Version=${{ needs.metadata.outputs.tag }} \
-            --configuration Release
+            --configuration Release \
             --os ${{ matrix.os }} \
             --arch ${{ matrix.arch }} \
             -p:ContainerRepository=${{ env.REPOSITORY }} \
